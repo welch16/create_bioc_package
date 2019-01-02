@@ -1,0 +1,79 @@
+---
+title: "Creating an R/Bioconductor package"
+author: "<br>Rene Welch"
+date: "2019/01/02 (updated: `r Sys.Date()`)"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    css: ["shinobi", "ninjutsu","assets/bioctheme.css"]
+    seal: true 
+    self_contained: false
+    nature:
+      ratio: "16:9"
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+
+options(htmltools.dir.version = FALSE)
+
+library(here)
+library(rwlib)
+library(tidyverse)
+library(caret)
+library(scales)
+library(ggrepel)
+library(magrittr)
+library(ggthemes)
+
+theme_set(
+	theme_bw() +
+	theme(
+		axis.text = element_text(size = 12),
+		axis.title = element_text(size = 14),
+		legend.text = element_text(size =12),
+		legend.title = element_text(size = 14),
+		strip.text = element_text(size = 14),
+		strip.background = element_blank(),
+		legend.position = "top"))
+
+knitr::opts_chunk$set(
+	include = TRUE,
+	echo = FALSE,
+	eval = TRUE,
+	warning = FALSE,
+	message = FALSE,
+	fig.align = "center",
+	dpi = 400,
+	fig.width = 4,
+	fig.height = 4
+	)
+
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
