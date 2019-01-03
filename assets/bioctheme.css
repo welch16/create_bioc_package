@@ -9,6 +9,7 @@
 
 
 :root {
+    --color-light-green: #8BC34A;
     --main-color1: #11547f;
     --main-color2: #1772AC;
     --main-color3: #1A81C2;
@@ -22,7 +23,7 @@
     --text-opacity: white;
     --link-color: #AACC70;
     --alert-color: #AACC70;
-    --text-alert: white;
+    --text-alert: #AACC70;
     --code-background: #f8f8f8;
     --code-inline-color: #FFD740;
     --code-text-color: black;
@@ -61,7 +62,7 @@
 }
 
 
-.title-slide h1 { padding-top: 10%; font-size: 5em; color: var(--alert-color);}
+.title-slide h1 { padding-top: 10%; font-size: 5em; color: var(--color-light-green);}
 .title-slide h2 { font-size: 4em; color: var(--alert-color);}
 .title-slide h3 { font-size: 4em; color: var(--alert-color);}
 .title-slide h1, .title-slide h2, .title-slide h3  {

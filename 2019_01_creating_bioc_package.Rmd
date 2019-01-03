@@ -59,7 +59,7 @@ knitr::opts_chunk$set(
 layout: false
 class: bg-main1 center middle
 
-.font5[What is bioconductor?]
+.font5.light-green[What is Bioconductor?]
 
 .font3[Bioconductor provides tools for the analysis and comprehension of high-throughput genomic data. Bioconductor uses the R statistical programming language, and is open source and open development. It has two releases each year, and an active user community.]
 
@@ -68,7 +68,7 @@ class: bg-main1 center middle
 layout: false
 class: bg-main1 middle
 
-.center[.font5[Why Bioconductor?]]
+.center[.font5.light-green[Why Bioconductor?]]
 
 .font2[
 
@@ -81,12 +81,25 @@ class: bg-main1 middle
 ]
 
 
+---
+layout: false
+class: bg-main1 middle center
+
+.font5.light-green[F1000Research Channel]
+
+
+```{r f1000,include=TRUE,echo=FALSE,out.width="650px"}
+
+knitr::include_graphics("images/F1000Bioc.png")
+
+```
+
 
 ---
 layout: false
 class: bg-main1 middle
 
-.center[.font5[Resources]]
+.center[.font5.light-green[Resources]]
 
 .font2[
 
