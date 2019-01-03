@@ -20,8 +20,8 @@
     --text-color4: white;
     --text-color5: black;
     --text-opacity: white;
-    --link-color: #ecadec;
-    --alert-color: #CF3C18;
+    --link-color: #AACC70;
+    --alert-color: #AACC70;
     --text-alert: white;
     --code-background: #f8f8f8;
     --code-inline-color: #FFD740;
@@ -35,23 +35,20 @@
 }
 
 .title-slide {
-  width: 60%;
-  text-align: left!important;
+  width: 100%;
+  text-align: center!important;
   height:100%;
   display: table;
   position: absolute;
   top: 0;
   right: 0;
-  background-color: var(--color-opacity70);
+  background-color: var(--main-color1);
   color: white;
   padding: 0;
-  border-left-color: white;
-  border-left-style: solid;
-  border-left-width: 0.5em;
 }
 
 .remark-slide {
-  background-color: var(--main-color4);
+  background-color: var(--main-color3);
   background-image: var(--logo), var(--title-background);
   background-size:  10%, cover;
   background-position: left bottom, 100%;
@@ -64,7 +61,9 @@
 }
 
 
-.title-slide h1 { padding-top: 20%; font-size: 4em;}
+.title-slide h1 { padding-top: 10%; font-size: 5em; color: var(--alert-color);}
+.title-slide h2 { font-size: 4em; color: var(--alert-color);}
+.title-slide h3 { font-size: 4em; color: var(--alert-color);}
 .title-slide h1, .title-slide h2, .title-slide h3  {
   padding-left: 4%!important;
   padding-right: 4%!important;

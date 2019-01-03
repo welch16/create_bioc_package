@@ -1,11 +1,11 @@
 ---
 title: "Creating an R/Bioconductor package"
-author: "<br>Rene Welch"
-date: "2019/01/02 (updated: `r Sys.Date()`)"
+author: "<br>Rene Welch<br>"
+date: "2019/01/02 <br>(updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
     lib_dir: libs
-    css: ["shinobi", "ninjutsu","assets/bioctheme.css"]
+    css: ["assets/bioctheme.css","shinobi", "ninjutsu"]
     seal: true 
     self_contained: false
     nature:
@@ -56,13 +56,49 @@ knitr::opts_chunk$set(
 
 ```
 
+layout: false
+class: bg-main1 center middle
+
+.font5[What is bioconductor?]
+
+.font3[Bioconductor provides tools for the analysis and comprehension of high-throughput genomic data. Bioconductor uses the R statistical programming language, and is open source and open development. It has two releases each year, and an active user community.]
+
+
+---
+layout: false
+class: bg-main1 middle
+
+.center[.font5[Why Bioconductor?]]
+
+.font2[
+
+- Accessibility: It is a central repository for high-throughput genomic data
+
+- Resources: There are many software/annotation/experiment packages that can be used
+
+- Community: It is very active, so there is a lot of people that can help
+
+]
 
 
 
+---
+layout: false
+class: bg-main1 middle
 
+.center[.font5[Resources]]
 
+.font2[
 
+- Ramos et al., [_"Software for the Integration of Multiomics Experiments in Bioconductor"_"](http://cancerres.aacrjournals.org/content/77/21/e39), Cancer Research 2017
 
+- Pasolli et al., [_"Accessible, curated metagenomic data through ExperimentHub"_](https://www.nature.com/articles/nmeth.4468), Nature Methods 2017
+
+- Huber et al., [_"Orchestrating high-throughput genomic analysis with Bioconductor"_](https://www.nature.com/articles/nmeth.3252), Nature Methods 2015
+
+- Lawrence et al., [_"Software for Computing and Annotating Genomic Ranges"_](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003118), PLOS Comp Bio 2013
+
+]
 
 
 
