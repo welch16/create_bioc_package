@@ -24,8 +24,8 @@
     --link-color: #AACC70;
     --alert-color: #AACC70;
     --text-alert: #AACC70;
-    --code-background: #f8f8f8;
-    --code-inline-color: #FFD740;
+    --code-background: #11547f;
+    --code-inline-color: #AACC70;
     --code-text-color: black;
     --code-highlight: rgba(136, 57, 138, 0.3);
     --color-opacity70: rgba(86,36,87,0.7);
@@ -34,6 +34,8 @@
     --logo: url("../images/bioconductor_logo.gif");
     --title-background: url("../bkgs/bg1.jpg");
 }
+
+.alert {color: var(--alert-color);}
 
 .title-slide {
   width: 100%;
@@ -111,10 +113,12 @@ h1, h2, h3, body{
   font-family: 'Yanone Kaffeesatz';
   font-weight: normal;
 }
+
 .remark-code, .remark-inline-code {
-  font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;
   color: var(--code-inline-color);
 }
+
+
 .remark-code {
   color: var(--code-text-color);
   background-color: var(--code-background);

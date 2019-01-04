@@ -5,7 +5,7 @@ date: "2019/01/02 <br>(updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
     lib_dir: libs
-    css: ["assets/bioctheme.css","shinobi", "ninjutsu"]
+    css: ["shinobi", "ninjutsu","assets/bioctheme.css"  ]
     seal: true 
     self_contained: false
     nature:
@@ -63,7 +63,6 @@ class: bg-main1 center middle
 
 .font3[Bioconductor provides tools for the analysis and comprehension of high-throughput genomic data. Bioconductor uses the R statistical programming language, and is open source and open development. It has two releases each year, and an active user community.]
 
-
 ---
 layout: false
 class: bg-main1 middle
@@ -72,13 +71,79 @@ class: bg-main1 middle
 
 .font2[
 
-- Accessibility: It is a central repository for high-throughput genomic data
+- .alert[Accessibility:] It is a central repository for high-throughput genomic data
 
-- Resources: There are many software/annotation/experiment packages that can be used
+- .alert[Resources:] There are many software/annotation/experiment packages that can be used
 
-- Community: It is very active, so there is a lot of people that can help
+- .alert[Community:] It is very active, so there is a lot of people that can help
 
 ]
+
+
+---
+layout: false
+class: bg-main1 middle
+
+.center[.font5.light-green[What kind of packages?]]
+
+.font2[
+
+- .alert[Software:] For methods almost everything gets accepted.
+
+- .alert[Experiment:] This is for experimental data. If the package need some example data to run, it is recommended to use one of their datasets prior to adding a new one. 
+
+- .alert[Annotation:] Annotation packages contain lightly or non-curated data from a public source and are updated with each .alert[Bioconductor] release (every 6 months). They are a source of general annotation for one or many organisms and are not specific to a particular experiment. When possible, they should support the `select()` interface from `AnnotationDbi`.
+
+]
+
+
+---
+layuot: false
+class: bg-main1 middle center
+
+.font5.light-green[Experiment packages]
+
+.font3[Typical stuff: Some data for the vignette]
+
+```{r experiment_example_chipexo,echo=FALSE,out.width="650px"}
+
+knitr::include_graphics("images/chipexoqualexample.png")
+
+```
+
+---
+layuot: false
+class: bg-main1 middle center
+
+.font5.light-green[Experiment packages]
+
+.font3[or a package with plotting functions]
+
+```{r experiment_example_ihw,echo=FALSE,out.width="650px"}
+
+knitr::include_url("http://bioconductor.org/packages/release/data/experiment/html/IHWpaper.html")
+
+```
+
+<!-- --- -->
+<!-- layout: false -->
+<!-- class: bg-main1 middle center -->
+
+<!-- .font5.light-green[Software packages] -->
+
+
+
+---
+layou: false
+class: bg-main1 middle
+
+.center[.font5.light-green[Software packages]
+
+.font3.alert[ General guidelines]]
+
+
+
+
 
 
 ---
