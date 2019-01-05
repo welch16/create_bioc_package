@@ -98,6 +98,20 @@ class: bg-main1 middle
 
 
 ---
+layout: false
+class: bg-main1 middle center
+
+.font5.light-green[Available packages in BiocViews] 
+
+```{r available_packages,echo=FALSE,out.width="850px"}
+
+knitr::include_url("https://bioconductor.org/packages/release/BiocViews.html")
+
+```
+
+
+
+---
 layuot: false
 class: bg-main1 middle center
 
@@ -137,13 +151,56 @@ knitr::include_url("http://bioconductor.org/packages/release/data/experiment/htm
 layou: false
 class: bg-main1 middle
 
-.center[.font5.light-green[Software packages]
+.center[.font5.light-green[Software packages] .font3.alert[ General guidelines]
 
-.font3.alert[ General guidelines]]
-
-
+]
 
 
+.font2[
+
+- In general almost every methods package can be submited, but it is recommended to re-use the available classes to avoid duplication of functionality. For example  `GRanges`, `SummarizedExperiment`, `Biostrings`, etc.
+
+- Minimal requierements are to pass `R CMD build`, `R CMD check`, and `R CMD BiocCheck` (from [BiocCheck package](https://bioconductor.org/packages/release/bioc/html/BiocCheck.html)) <br> (i.e. no `ERRORS`, no `WARNINGS`)
+
+
+]
+
+---
+layout: false
+class: bg-main1 middle 
+
+.center[.font3.light-green[ DESCRIPTION]]
+
+
+.font1[
+
+The DESCRIPTION file must be properly formatted. The following section will review some important notes regarding DESCRIPTION fields and associated files.
+
+1. “Package:” and “Title:” fields
+
+3. “Version:” field: All Bioconductor packages use an x.y.z version scheme. x is usually 0 for packages that have not yet been released. y is even for packages in release, and odd for packages in devel. Generally, do not bump this number especially in pre-release. z is incremented whenever committing changes to a package.
+
+4. “Description:” field: The description should be a relatively short but detailed overview of what the package functionality entails. It should be one or more complete sentences.
+
+5. “Authors@R or Author/Maintainer:” fields: Use either Authors@R seems simpler. Only one maintainer
+
+6. “License:” field: should preferably refer to a standard license (see wikipedia) using one of R’s standard specifications.
+
+7. “LazyData:” field: .red[Don't]
+
+8. .alert[“Depends/Imports/Suggests/Enhances:” fields] <- later
+
+9. “SystemRequirements:” field: This field is for listing any external software which is required, but not automatically installed by the normal package installation process. If the installation process is non-trivial, a top-level README file should be included to document the process.
+
+10..alert[“biocViews:” field: REQUIRED!] Specify one or more biocViews categories. Multiple terms are encouraged but terms must come from the same package type (Software, AnnotationData, ExperimentData, Workflow).
+
+11. “BugReports:” field: .alert[Github link]
+
+12. “URL:” and “Video:” fields: .red[not really necessary]
+
+14. “Collates:” field: This may be necessary to order class and method definitions appropriately during package installation.
+
+]
 
 
 ---
