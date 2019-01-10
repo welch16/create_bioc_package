@@ -1,7 +1,7 @@
 ---
 title: "Creating an R/Bioconductor package"
 author: "<br>Rene Welch<br>"
-date: "2019/01/02 <br>(updated: `r Sys.Date()`)"
+date: "updated: `r Sys.Date()`"
 output:
   xaringan::moon_reader:
     lib_dir: libs
@@ -407,6 +407,8 @@ class: bg-main1 middle
   - Have all the classes and generics in .alert[R/AllClasses.R] and .alert[R/AllGenerics.R], respectively
   
 - Use .alert[<-] instead of .alert[=] when doing functions
+
+- More on [bioconductor.org](https://www.bioconductor.org/developers/package-guidelines/)
 
 ]
 
