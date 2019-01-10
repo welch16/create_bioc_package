@@ -387,6 +387,30 @@ class: bg-main1 middle
 
 ]
 
+---
+layou: false
+class: bg-main1 middle
+
+.center[.font5.light-green[Software packages] .font3.alert[ General guidelines]
+
+]
+
+
+.font2[
+
+- Follow a .alert[camelCase] convention when naming functions
+
+- If using .alert[OOP]:
+
+  - Interoperate with .alert[Bioconductor] classes
+
+  - Have all the classes and generics in .alert[R/AllClasses.R] and .alert[R/AllGenerics.R], respectively
+  
+- Use .alert[<-] instead of .alert[=] when doing functions
+
+]
+
+
 
 ---
 layout: false
