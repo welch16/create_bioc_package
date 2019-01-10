@@ -145,25 +145,13 @@ knitr::include_url("http://bioconductor.org/packages/release/data/experiment/htm
 
 <!-- .font5.light-green[Software packages] -->
 
-
-
 ---
-layou: false
-class: bg-main1 middle
+layout: false
+class: bg-main1 middle center
 
-.center[.font5.light-green[Software packages] .font3.alert[ General guidelines]
+.font5[.light-green[SOFTWARE]]
 
-]
-
-
-.font2[
-
-- In general almost every methods package can be submited, but it is recommended to re-use the available classes to avoid duplication of functionality. For example  `GRanges`, `SummarizedExperiment`, `Biostrings`, etc.
-
-- Minimal requierements are to pass `R CMD build`, `R CMD check`, and `R CMD BiocCheck` (from [BiocCheck package](https://bioconductor.org/packages/release/bioc/html/BiocCheck.html)) <br> (i.e. no `ERRORS`, no `WARNINGS`)
-
-
-]
+.font4[Composition of a .alert[R/Bioconductor] package]
 
 ---
 layout: false
@@ -302,6 +290,43 @@ class: bg-main1 split-five
 
 ---
 layout: false
+class: bg-main1 
+
+
+.font5.center[.light-green[BiocParallel]]
+
+.font2[There are many methods to work in .alert[parallel]. .alert[BiocParallel] provides unified interfacem and allows .alert[cluster scheduling]
+
+For example, we just change .alert[BPPARAM] to use the package in other OS:]
+
+```
+if(Sys.info()[["sysname"]] == "Windows"){
+  snow <- SnowParam(workers = mc.cores, type = "SOCK")
+  stats <- bpmapply(calculateSummary,rlist,fwdReads,revReads,
+           BPPARAM = snow,SIMPLIFY = FALSE)       
+}else{
+  stats <- bpmapply(calculateSummary,rlist,fwdReads,revReads,
+            BPPARAM = MulticoreParam(workers = mc.cores),
+            SIMPLIFY = FALSE)       
+}
+```
+
+---
+layout: false
+class: middle center
+
+.font5[.light-green[vignettes]]
+
+.font2.black[Easy to follow use cases. Can contain one or many .Rmd or .Rnw files. But it need to run in less than 5 minutes. Check [BiocStyle](https://bioconductor.org/packages/release/bioc/html/BiocStyle.html) for more formatting stuff]
+
+```{r chipexoqual_vignette, echo=FALSE,out.width="750px"}
+
+knitr::include_url("https://bioconductor.org/packages/release/bioc/vignettes/ChIPexoQual/inst/doc/vignette.html")
+
+```
+
+---
+layout: false
 class: bg-main1 middle 
 
 .font5[.center[.light-green[CITATION]]]
@@ -328,6 +353,7 @@ citEntry(entry="article",
 "Genome Biology 15(12):550 (2014)" ) )
 ```
 
+
 ---
 layout: false
 class: bg-main1 middle
@@ -342,7 +368,105 @@ class: bg-main1 middle
 
 - .font4[.alert[data] dir with easy to load .RData files]
 
-- .font4[.alert[tests] and .alert[vignettes]]
+
+---
+layou: false
+class: bg-main1 middle
+
+.center[.font5.light-green[Software packages] .font3.alert[ General guidelines]
+
+]
+
+
+.font2[
+
+- In general almost every methods package can be submited, but it is recommended to re-use the available classes to avoid duplication of functionality. For example  `GRanges`, `SummarizedExperiment`, `Biostrings`, etc.
+
+- Minimal requierements are to pass `R CMD build`, `R CMD check`, and `R CMD BiocCheck` (from [BiocCheck package](https://bioconductor.org/packages/release/bioc/html/BiocCheck.html)) <br> (i.e. no `ERRORS`, no `WARNINGS`)
+
+
+]
+
+
+---
+layout: false
+class: bg-main1 middle
+
+.font5.center[.light-green[After submission]]
+
+.font2[After submission, and everyday the package is checked for errors, in multiple OS]
+
+```{r chipexoqual_checks,echo=FALSE,out.width="1000px"}
+
+knitr::include_url("https://www.bioconductor.org/checkResults/3.8/bioc-LATEST/ChIPexoQual/malbec1-checksrc.html")
+
+```
+
+---
+layout: false
+class: bg-main1 split-five
+
+.row[.content[
+.font5.center[.light-green[After submission]]
+]]
+
+.row.slide-in-bottom[
+
+.content[
+
+.split-three[
+
+.column[.content[
+
+.font3[A .alert[Bioconductor] representative will check the package manually, and suggest a series of improvements.]
+
+]]
+
+.column[.content[
+
+.font3[
+
+For example:
+
+Check with [spelling](https://cran.r-project.org/web/packages/spelling/index.html) or [goodpractice](https://cran.r-project.org/web/packages/goodpractice/index.html) packages
+
+]
+
+]]
+
+.column[
+
+.content[
+
+.font3[
+Simplify certain functions, etc.
+
+Basically, they will help to improve the package
+]
+
+
+]
+]
+
+]]
+]
+
+
+
+---
+layout: false
+class: middle center
+
+.font5[.light-green[Accessibility: Download stats]]
+
+.font2.black[Bioconductor is a large body of R packages, so the accesibility increase the number of uses. For example:]
+
+```{r chipexoqual_stat,echo=FALSE,out.width="950px"}
+
+knitr::include_url("http://bioconductor.org/packages/stats/bioc/ChIPexoQual/")
+
+```
+
 
 
 ---
@@ -363,7 +487,7 @@ knitr::include_graphics("images/F1000Bioc.png")
 layout: false
 class: bg-main1 middle
 
-.center[.font5.light-green[Resources]]
+.center[.font5.light-green[Additional Resources]]
 
 .font2[
 
