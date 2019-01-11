@@ -512,6 +512,27 @@ class: bg-main1 middle
 
 ]
 
+---
+layout: false
+class: bg-main1 middle
+
+.center[.font5[.light-green[Developmental cycle] ] ]
+
+.center.font3[
+
+mid-April to mid-October: Most recent version of .alert[R]
+
+mid-October to mid-April: .alert[devel] version of .alert[R]
+]
+
+```
+if (!requireNamespace("BiocManager", quietly=TRUE))
+    install.packages("BiocManager")
+BiocManager::install(version = "devel")
+BiocManager::valid()              # checks for out of date packages
+```
+
+.font2.right[ [details here](https://www.bioconductor.org/developers/how-to/useDevel/)]
 
 
 ---
