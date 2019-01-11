@@ -199,7 +199,7 @@ class: bg-main1
 
 .column[.content[
 
-.center.top[.font3.light-green[NAMESPACE]]
+.center.top[.font3.light-green[NAMESPACE] and .light-green[man]]
 
 
 .font2[
@@ -290,6 +290,15 @@ class: bg-main1 split-five
 
 ---
 layout: false
+class: bg-main1 center middle
+
+.font5[For an example of how to extend one of those classes, check [DESeq2](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-014-0550-8) in
+ [Bioconductor](https://github.com/mikelove/DESeq2) and [github](https://bioconductor.org/packages/release/bioc/html/DESeq2.html)]
+
+
+
+---
+layout: false
 class: bg-main1 
 
 
@@ -313,6 +322,30 @@ if(Sys.info()[["sysname"]] == "Windows"){
 
 ---
 layout: false
+class: bg-main1 
+
+
+.font5.center[.light-green[BiocParallel]]
+
+.font3[Possible to check the available parallel parameters with .alert[BiocParallel::registered()],
+and even reconfigured them with .alert[BiocParallel::register()]. For example,
+]
+
+
+```
+register(MulticoreParam(workers = k))
+
+## then run 
+bplapply() 
+bpmapply()
+
+```
+
+.font3[The syntax is the same than .alert[lapply, mapply(),] etc.]
+
+
+---
+layout: false
 class: middle center
 
 .font5[.light-green[vignettes]]
@@ -324,6 +357,73 @@ class: middle center
 knitr::include_url("https://bioconductor.org/packages/release/bioc/vignettes/ChIPexoQual/inst/doc/vignette.html")
 
 ```
+
+
+
+---
+layout: false
+class: bg-main1 split-five
+
+.row[.content[
+.center.font5[.light-green[BiocStyle]]
+]]
+
+.row.slide-in-bottom[
+
+.content[
+
+.split-two[
+
+.column[.content[
+
+.font2[Need to use in the .alert[DESCRIPTION]]
+
+```
+  VignetteBuilder: knitr
+  Suggests: BiocStyle, knitr, rmarkdown
+```
+
+.font2[Then, start the .Rmd file with:]
+
+```
+  ---
+  title: "Vignette Title"
+  author: "Vignette Author"
+  package: PackageName
+  output: 
+    BiocStyle::html_document
+  vignette: >
+    %\VignetteIndexEntry{Vignette Title}
+    %\VignetteEngine{knitr::rmarkdown}
+    %\VignetteEncoding{UTF-8}  
+  ---
+  ```
+
+
+
+]]
+
+.column[.content[
+
+.font2[Requires .alert[rmarkdown] and .alert[pandoc]
+
+Some extra macros, unique to .alert[BiocStyle]:
+]
+
+
+```
+Biocpkg("IRanges")
+CRANpkg("data.table")
+Githubpkg("rstudio/rmarkdown")
+Rpackage("MyPkg")
+```
+
+.font2[Use with .alert['r Biocpkg("IRanges")'] in the markdown document to get highlight and link]
+
+
+]]
+]]
+]
 
 ---
 layout: false
@@ -528,8 +628,18 @@ class: bg-main1 middle
 ]
 
 
+---
+layout: false
+class: bg-main1 middle
 
 
+```{r rwlib,echo=FALSE,out.width="450px"}
+
+knitr::include_graphics("https://media.giphy.com/media/l3vRfMnNtfBvwsdby/giphy.gif")
+
+```
+
+.font3.center[[Not yet, an example of a simple package](https://github.com/welch16/rwlib)]
 
 
 
