@@ -57,6 +57,26 @@ knitr::opts_chunk$set(
 ```
 
 layout: false
+class: bg-main1 middle
+
+.font5[.center.light-green[Shameless plug]]
+
+.font2[
+
+I have written some .alert[R packages] over the last years, that may be of use:
+
+&nbsp;&nbsp; [ChIPUtils](https://github.com/welch16/ChIPUtils/tree/devel) - quality control and basic analysis routines for ChIP-seq (ChIP-exo)
+
+&nbsp;&nbsp; [Segvis](https://github.com/welch16/Segvis) - plotting tool to make average profiles, plot peaks, etc
+
+&nbsp;&nbsp; [rwlib](https://github.com/welch16/rwlib) - some functions that I use very frequently
+
+&nbsp;&nbsp; Also [this slides are in github](https://github.com/welch16/create_bioc_package)
+
+]
+
+---
+layout: false
 class: bg-main1 center middle
 
 .font5.light-green[What is Bioconductor?]
